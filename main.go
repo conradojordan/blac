@@ -27,6 +27,8 @@ const (
 	spades
 )
 
+const Version = "1.0.0"
+
 type card struct {
 	rank string
 	suit suit
@@ -303,7 +305,7 @@ var (
 )
 
 func (m model) menuView() string {
-	title := brand.Render("♠  BLACKJACK  ♣")
+	title := brand.Render("♠  Blac - A terminal BLACKJACK game  ♣")
 	subtitle := lipgloss.NewStyle().Foreground(muted).Render("A quiet table. One deck. Your call.")
 	items := []string{"Start a new game", "Exit"}
 	var menu strings.Builder
